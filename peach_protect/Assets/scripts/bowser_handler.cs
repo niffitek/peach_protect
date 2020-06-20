@@ -44,7 +44,7 @@ public class bowser_handler : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Vector3 pos = Input.mousePosition;
-            if (pos.y > -4 && pos.y < 0.5)
+            if (pos.y > 30 && pos.y < 140)
             {
                 pos.z = 10.0f;
                 pos = Camera.main.ScreenToWorldPoint(pos);

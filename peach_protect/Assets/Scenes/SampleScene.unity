@@ -279,7 +279,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23571461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -394,7 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da140a26109c2ef4e925bc0cdfbb60d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 913347321}
+  gumba: {fileID: 913347321}
+  shot: {fileID: 499087527}
 --- !u!95 &170757713
 Animator:
   serializedVersion: 3
@@ -729,7 +730,7 @@ GameObject:
   - component: {fileID: 418070820}
   m_Layer: 0
   m_Name: Mario
-  m_TagString: Untagged
+  m_TagString: Mario
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,6 +813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isClone: 0
+  life: 2
+  lifebar: 100
 --- !u!95 &418070818
 Animator:
   serializedVersion: 3
@@ -915,6 +918,7 @@ GameObject:
   - component: {fileID: 499087530}
   - component: {fileID: 499087529}
   - component: {fileID: 499087528}
+  - component: {fileID: 499087534}
   - component: {fileID: 499087531}
   - component: {fileID: 499087533}
   - component: {fileID: 499087532}
@@ -1062,6 +1066,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &499087534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499087527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b573e3c4a8cdfef41832f8f8f27f414b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClone: 0
+  isColliding: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,7 +1698,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913347321}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

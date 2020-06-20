@@ -6,12 +6,14 @@ public class mario_handler : MonoBehaviour
 {
     private float movSpeed = 0.01f;
     public bool isClone = false;
-    private int life = 1;
+    public int life = 2;
     public int lifebar = 100;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         lifebar = life * 100;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,7 +21,8 @@ public class mario_handler : MonoBehaviour
     {
         if (isClone == false)
             return;
-
+        if (life == 1)
+            anim.SetBool("small", true);
         if (life <= 0 || transform.position.x <= -12)
         {
             Destroy(gameObject);
@@ -35,6 +38,7 @@ public class mario_handler : MonoBehaviour
         if (collision.name == "Peach")
         {
             collision.GetComponent<peach_handler>().lifebar -= life;
+            Destroy(gameObject);
         }
     }
 }

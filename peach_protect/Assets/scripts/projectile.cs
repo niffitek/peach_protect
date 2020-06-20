@@ -5,6 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
     public bool isClone = false;
+    public bool isColliding = false;
     void Update()
     {
         if (isClone == false)
@@ -14,10 +15,12 @@ public class projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "Mario")
+        if (isColliding) return;
+        isColliding = true;
+        if (collision.gameObject.tag == "Mario")
         {
-            collision.GetComponent<mario_handler>().lifebar -= 100;
-            Destroy(gameObject);
+            collision.GetComponent<mario_handler>().life -= 1;
+            Destroy(this.gameObject);
         }
     }
 }

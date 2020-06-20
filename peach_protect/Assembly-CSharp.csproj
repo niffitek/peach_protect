@@ -70,6 +70,7 @@
     <Compile Include="Assets\scripts\main_menu.cs" />
     <Compile Include="Assets\scripts\mario_handler.cs" />
     <Compile Include="Assets\scripts\peach_handler.cs" />
+    <Compile Include="Assets\scripts\projectile.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

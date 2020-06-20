@@ -8,7 +8,7 @@ public class peach_handler : MonoBehaviour
 {
     private bool move = false;
     private float movSpeed = 0.02f;
-    public float lifebar = 40;
+    public float lifebar = 50;
     public Image bar;
     // Start is called before the first frame update
     void Start()
