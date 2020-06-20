@@ -12,6 +12,8 @@ public class projectile : MonoBehaviour
             return;
         Vector3 moveVec = new Vector3(transform.position.x + 0.05f, transform.position.y, transform.position.y);
         transform.position = moveVec;
+        if (transform.position.x > 12)
+            Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

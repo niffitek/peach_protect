@@ -7,8 +7,10 @@ public class bowser_handler : MonoBehaviour
 {
     public GameObject gumba;
     public GameObject shot;
+    public GameObject spawner;
     private float movSpeed = 0.03f;
     private Animator anim;
+    public int leftgumba = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,16 +45,22 @@ public class bowser_handler : MonoBehaviour
             anim.speed = 0;
         if (Input.GetMouseButtonDown(1))
         {
-            Vector3 pos = Input.mousePosition;
-            if (pos.y > 30 && pos.y < 140)
+            if (leftgumba > 0)
             {
-                pos.z = 10.0f;
-                pos = Camera.main.ScreenToWorldPoint(pos);
-                var x = pos.x;
-                Debug.Log(pos.y);
-                pos.x = -11;
-                GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
-                test.GetComponent<gumba_handler>().pos_x = x;
+                Vector3 pos = Input.mousePosition;
+                if (pos.y > 30 && pos.y < 140)
+                {
+                    leftgumba--;
+                    pos.z = 10.0f;
+                    pos = Camera.main.ScreenToWorldPoint(pos);
+                    var x = pos.x;
+                    Debug.Log(pos.y);
+                    pos.x = -11;
+                    GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
+                    test.GetComponent<gumba_handler>().pos_x = x;
+                    test.GetComponent<gumba_handler>().isClone = true;
+                    test.GetComponent<gumba_handler>().begin = spawner.GetComponent<MarioSpawner>().welle;
+                }
             }
         }
         if (Input.GetMouseButtonDown(0))

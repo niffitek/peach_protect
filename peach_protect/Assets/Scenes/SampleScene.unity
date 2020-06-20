@@ -396,6 +396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gumba: {fileID: 913347321}
   shot: {fileID: 499087527}
+  spawner: {fileID: 579333384}
+  leftgumba: 1
 --- !u!95 &170757713
 Animator:
   serializedVersion: 3
@@ -812,9 +814,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b2dca33ec1047449ad8dd36c72c8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movSpeed: 0.01
   isClone: 0
   life: 2
   lifebar: 100
+  spawner: {fileID: 579333384}
 --- !u!95 &418070818
 Animator:
   serializedVersion: 3
@@ -1193,6 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mario: {fileID: 418070814}
+  bowserSpawn: {fileID: 170757709}
   welle: 0
 --- !u!4 &579333386
 Transform:
@@ -1690,7 +1695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0d271284f03c24ca64431143991ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawner: {fileID: 579333384}
+  begin: 0
   pos_x: 0
+  isClone: 0
 --- !u!61 &913347327
 BoxCollider2D:
   m_ObjectHideFlags: 0

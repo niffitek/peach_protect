@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class mario_handler : MonoBehaviour
 {
-    private float movSpeed = 0.01f;
+    public float movSpeed = 0.01f;
     public bool isClone = false;
     public int life = 2;
     public int lifebar = 100;
     private Animator anim;
+    public GameObject spawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class mario_handler : MonoBehaviour
             anim.SetBool("small", true);
         if (life <= 0 || transform.position.x <= -12)
         {
+            spawner.GetComponent<MarioSpawner>().oneLess();
             Destroy(gameObject);
             return;
         }
@@ -38,6 +40,7 @@ public class mario_handler : MonoBehaviour
         if (collision.name == "Peach")
         {
             collision.GetComponent<peach_handler>().lifebar -= life;
+            spawner.GetComponent<MarioSpawner>().oneLess();
             Destroy(gameObject);
         }
     }

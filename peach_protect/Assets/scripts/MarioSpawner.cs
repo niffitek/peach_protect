@@ -5,6 +5,8 @@ using UnityEngine;
 public class MarioSpawner : MonoBehaviour
 {
     public GameObject mario;
+    public GameObject bowserSpawn;
+
     //  public GameObject bigMario;
     public int welle = 0;
     private int left_marios = 0;
@@ -21,26 +23,26 @@ public class MarioSpawner : MonoBehaviour
         if (left_marios == 0)
         {
             welle++;
-            for (int i = 0; i < welle; i++)
+            bowserSpawn.GetComponent<bowser_handler>().leftgumba++;
+            for (int i = 0; i < welle * 3; i++)
             {
                 Spawner();
             }
         }
-        Spawner();
     }
 
     void Spawner()
     {
-        if (Random.Range(0, 100) == 0)
+        GameObject test = (GameObject)Instantiate(mario, new Vector3(Random.Range(0, 13), Random.Range(0, -4), -1), Quaternion.identity);
+        test.GetComponent<mario_handler>().isClone = true;
+        left_marios++;
+        if (Random.Range(0, 2) == 0)
         {
-            GameObject test = (GameObject)Instantiate(mario, new Vector3(Random.Range(0, 13), Random.Range(0, -4), -1), Quaternion.identity);
-            test.GetComponent<mario_handler>().isClone = true;
-            left_marios++;
-        }/*
-        else
-        {
-            GameObject test = (GameObject)Instantiate(bigMario, new Vector3(Random.Range(0, 10), Random.Range(-10, 10), -1), Quaternion.identity);
-            test.GetComponent<bigMario_handler>().isClone = true;
-        }*/
+            test.GetComponent<mario_handler>().life = 1;
+        }
+    }
+    public void oneLess()
+    {
+        left_marios--;
     }
 }
