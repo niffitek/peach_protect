@@ -19,14 +19,10 @@ public class mario_handler : MonoBehaviour
     {
         if (life == 1)
             anim.SetBool("small", true);
-
-        if (life <= 0 || transform.position.x < 12)
+        if (isClone && (life <= 0 || transform.position.x < -9.0f))
         {
-            Destroy(this);
-            return;
+            Destroy(gameObject);
         }
-        if (isClone == false)
-            return;
         Vector3 moveVec = new Vector3(transform.position.x - movSpeed, transform.position.y, -2);
         transform.position = moveVec;
     }
