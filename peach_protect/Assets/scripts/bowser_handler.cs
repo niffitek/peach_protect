@@ -5,7 +5,8 @@ using UnityEngine.UIElements;
 
 public class bowser_handler : MonoBehaviour
 {
-    public GameObject go;
+    public GameObject gumba;
+    public GameObject shot;
     private float movSpeed = 0.03f;
     private Animator anim;
     // Start is called before the first frame update
@@ -37,10 +38,10 @@ public class bowser_handler : MonoBehaviour
         {
             moveVec.x += movSpeed;
             anim.speed = 1;
-        } 
+        }
         else
             anim.speed = 0;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             Vector3 pos = Input.mousePosition;
             if (pos.y > -4 && pos.y < 0.5)
@@ -50,9 +51,16 @@ public class bowser_handler : MonoBehaviour
                 var x = pos.x;
                 Debug.Log(pos.y);
                 pos.x = -11;
-                GameObject test = (GameObject)Instantiate(go, pos, Quaternion.identity);
+                GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
                 test.GetComponent<gumba_handler>().pos_x = x;
             }
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 pos = transform.position;
+            pos.x += 1;
+            GameObject test = (GameObject)Instantiate(shot, pos, Quaternion.identity);
+            test.GetComponent<projectile>().isClone = true;
         }
         transform.position = moveVec;
     }

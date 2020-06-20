@@ -7,7 +7,7 @@ public class mario_handler : MonoBehaviour
     private float movSpeed = 0.01f;
     public bool isClone = false;
     private int life = 1;
-    private int lifebar = 100;
+    public int lifebar = 100;
     // Start is called before the first frame update
     void Start()
     {
