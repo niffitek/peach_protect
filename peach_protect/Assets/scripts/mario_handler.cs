@@ -8,6 +8,7 @@ public class mario_handler : MonoBehaviour
     public bool isClone = false;
     public int life = 2;
     public int lifebar = 100;
+    private float timer = 0.0f;
     private Animator anim;
     public GameObject spawner;
     // Start is called before the first frame update
@@ -16,14 +17,16 @@ public class mario_handler : MonoBehaviour
         lifebar = life * 100;
         anim = GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         if (isClone == false)
             return;
         if (life == 1)
             anim.SetBool("small", true);
+        if (timer < 1)
+            return;
         if (life <= 0 || transform.position.x <= -12)
         {
             spawner.GetComponent<MarioSpawner>().oneLess();

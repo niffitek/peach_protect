@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class MarioSpawner : MonoBehaviour
@@ -8,6 +9,7 @@ public class MarioSpawner : MonoBehaviour
     public GameObject bowserSpawn;
 
     //  public GameObject bigMario;
+    private float sleeper = 1.0f;
     public int welle = 0;
     private int left_marios = 0;
     // Start is called before the first frame update
