@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class peach_handler : MonoBehaviour
 {
     private bool move = false;
     private float movSpeed = 0.02f;
-    public float lifebar = 50;
+    public float lifebar = 40;
+    public Image bar;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,8 @@ public class peach_handler : MonoBehaviour
         {
             moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, transform.position.y);
         }
-
+        var theBarRectTransform = bar.transform as RectTransform;
+        theBarRectTransform.sizeDelta = new Vector2(lifebar * 12, theBarRectTransform.sizeDelta.y);
         transform.position = moveVec;
     }
 }
