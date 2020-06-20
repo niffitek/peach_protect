@@ -34,13 +34,10 @@ public class bowser_handler : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            var v3 = Input.mousePosition;
-            v3.z = 10.0f;
-            v3 = Camera.main.ScreenToWorldPoint(v3);
-            var x = v3.x;
-            v3.x = -11f;
-            GameObject test = (GameObject)Instantiate(go, v3, Quaternion.identity);
-            test.GetComponent<gumba_handler>().pos_x = x;
+            Vector3 pos = transform.position;
+            pos.x = -11;
+            GameObject test = (GameObject)Instantiate(go, pos, Quaternion.identity);
+            test.GetComponent<gumba_handler>().pos_x = transform.position.x;
         }
         transform.position = moveVec;
     }

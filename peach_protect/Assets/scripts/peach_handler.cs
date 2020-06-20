@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class peach_handler : MonoBehaviour
 {
     private bool move = false;
     private float movSpeed = 0.02f;
-    public int hp = 30;
+    public float lifebar = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +17,6 @@ public class peach_handler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
-            SceneManager.LoadScene(2);
         Vector3 moveVec;
         if (Random.Range(0, 70) == 1)
         {
@@ -32,6 +29,7 @@ public class peach_handler : MonoBehaviour
             move = true;
         if (transform.position.y < -3)
             move = false;
+
         if (move == true)
         {
             moveVec = new Vector3(transform.position.x, transform.position.y - movSpeed, transform.position.y);
@@ -40,6 +38,7 @@ public class peach_handler : MonoBehaviour
         {
             moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, transform.position.y);
         }
+
         transform.position = moveVec;
     }
 }
