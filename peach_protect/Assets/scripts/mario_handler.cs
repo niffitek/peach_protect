@@ -19,7 +19,8 @@ public class mario_handler : MonoBehaviour
     {
         if (life == 1)
             anim.SetBool("small", true);
-        if (life <= 0)
+
+        if (life <= 0 || transform.position.x < 12)
         {
             Destroy(this);
             return;
