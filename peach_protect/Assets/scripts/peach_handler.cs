@@ -4,16 +4,39 @@ using UnityEngine;
 
 public class peach_handler : MonoBehaviour
 {
+    private bool move = false;
+    private float movSpeed = 0.02f;
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 pos = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0);
+        Vector3 pos = new Vector3(Random.Range(-10, -8), Random.Range(-4, 0), 0);
         transform.position = pos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 moveVec;
+        if (Random.Range(0, 70) == 1)
+        {
+            if (move == true)
+                move = false;
+            else
+                move = true;
+        }
+        if (transform.position.y >= 0)
+            move = true;
+        if (transform.position.y < -3)
+            move = false;
+        if (move == true)
+        {
+            moveVec = new Vector3(transform.position.x, transform.position.y - movSpeed, -2);
+        }
+        else
+        {
+            moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, -2);
+        }
+
+        transform.position = moveVec;
     }
 }
