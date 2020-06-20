@@ -6,12 +6,14 @@ using UnityEngine;
 public class MarioSpawner : MonoBehaviour
 {
     public GameObject mario;
-    public GameObject bowserSpawn;
+    //public GameObject bowserSpawn;
 
     //  public GameObject bigMario;
     private float sleeper = 1.0f;
     public int welle = 0;
-    private int left_marios = 0;
+    public int goombas = 0;
+    public int koopas = 0;
+    public int left_marios = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +24,16 @@ public class MarioSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (left_marios == 0)
+        if (GameObject.FindGameObjectsWithTag("Mario").Length <= 1)
         {
             welle++;
-            bowserSpawn.GetComponent<bowser_handler>().leftgumba++;
             for (int i = 0; i < welle * 3; i++)
             {
                 Spawner();
             }
+            goombas++;
+            if (welle % 2 == 0)
+                koopas++;
         }
     }
 

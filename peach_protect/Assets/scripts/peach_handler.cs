@@ -44,7 +44,7 @@ public class peach_handler : MonoBehaviour
             moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, transform.position.y);
         }
         var theBarRectTransform = bar.transform as RectTransform;
-        theBarRectTransform.sizeDelta = new Vector2(lifebar * 12, theBarRectTransform.sizeDelta.y);
+        theBarRectTransform.sizeDelta = new Vector2(-68 - (50 - lifebar) * 12, theBarRectTransform.sizeDelta.y);
         transform.position = moveVec;
     }
 }

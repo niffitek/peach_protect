@@ -22,7 +22,7 @@ public class projectile : MonoBehaviour
         if (collision.gameObject.tag == "Mario")
         {
             collision.GetComponent<mario_handler>().life -= 1;
-            Destroy(this.gameObject);
         }
+        Destroy(this.gameObject);
     }
 }
