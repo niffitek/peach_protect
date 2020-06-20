@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\MarioSpawner.cs" />
     <Compile Include="Assets\scripts\bowser_handler.cs" />
+    <Compile Include="Assets\scripts\game_over.cs" />
     <Compile Include="Assets\scripts\gumba_handler.cs" />
     <Compile Include="Assets\scripts\main_menu.cs" />
     <Compile Include="Assets\scripts\mario_handler.cs" />
