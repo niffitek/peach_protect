@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class bowser_handler : MonoBehaviour
 {
+    public GameObject go;
     private float movSpeed = 0.03f;
-    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -18,27 +18,26 @@ public class bowser_handler : MonoBehaviour
         Vector3 moveVec = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         if (Input.GetKey(KeyCode.W) && transform.position.y <= 0)
         {
-            anim.speed = 1;
             moveVec.y += movSpeed;
         }
-        else if (Input.GetKey(KeyCode.A) && transform.position.x >= -11)
+        if (Input.GetKey(KeyCode.A) && transform.position.x >= -11)
         {
-            anim.speed = 1; 
             moveVec.x -= movSpeed;
         }
-        else if (Input.GetKey(KeyCode.S) && transform.position.y >= -3)
+        if (Input.GetKey(KeyCode.S) && transform.position.y >= -3)
         {
-            anim.speed = 1; 
             moveVec.y -= movSpeed;
         }
-        else if (Input.GetKey(KeyCode.D) && transform.position.x <= 11)
+        if (Input.GetKey(KeyCode.D) && transform.position.x <= 11)
         {
-            anim.speed = 1; 
             moveVec.x += movSpeed;
         }
-        else
+        if (Input.GetMouseButtonDown(0))
         {
-            anim.speed = 0;
+            Vector3 pos = transform.position;
+            pos.x = -11;
+            GameObject test = (GameObject)Instantiate(go, pos, Quaternion.identity);
+            test.GetComponent<gumba_handler>().pos_x = transform.position.x;
         }
         transform.position = moveVec;
     }

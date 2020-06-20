@@ -5,7 +5,7 @@ using UnityEngine;
 public class MarioSpawner : MonoBehaviour
 {
     public GameObject mario;
-    public GameObject bigMario;
+    //  public GameObject bigMario;
     public int welle = 0;
     private int left_marios = 0;
     // Start is called before the first frame update
