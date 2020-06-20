@@ -30,11 +30,11 @@ public class peach_handler : MonoBehaviour
             move = false;
         if (move == true)
         {
-            moveVec = new Vector3(transform.position.x, transform.position.y - movSpeed, -2);
+            moveVec = new Vector3(transform.position.x, transform.position.y - movSpeed, transform.position.y);
         }
         else
         {
-            moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, -2);
+            moveVec = new Vector3(transform.position.x, transform.position.y + movSpeed, transform.position.y);
         }
 
         transform.position = moveVec;

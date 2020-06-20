@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 23571464}
   - component: {fileID: 23571463}
   - component: {fileID: 23571462}
+  - component: {fileID: 23571465}
   m_Layer: 0
   m_Name: Koopa
   m_TagString: Untagged
@@ -222,6 +223,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &23571465
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23571461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.07174616}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.23, y: 0.33}
+    newSize: {x: 0.19, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.23, y: 0.18650772}
+  m_EdgeRadius: 0
 --- !u!1 &170757709
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +478,7 @@ GameObject:
   - component: {fileID: 364491173}
   - component: {fileID: 364491175}
   - component: {fileID: 364491176}
+  - component: {fileID: 364491177}
   m_Layer: 0
   m_Name: Peach
   m_TagString: Untagged
@@ -557,6 +585,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &364491177
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364491172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 0.47}
+    newSize: {x: 0.24, y: 0.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 0.47}
+  m_EdgeRadius: 0
 --- !u!1 &418070814
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +623,7 @@ GameObject:
   - component: {fileID: 418070815}
   - component: {fileID: 418070817}
   - component: {fileID: 418070818}
+  - component: {fileID: 418070819}
   m_Layer: 0
   m_Name: Mario
   m_TagString: Untagged
@@ -673,6 +728,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &418070819
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418070814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0008158684, y: -0.11147292}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.19, y: 0.37}
+    newSize: {x: 0.19, y: 0.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.15899214, y: 0.12095556}
+  m_EdgeRadius: 0
 --- !u!1 &499087527
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +765,7 @@ GameObject:
   - component: {fileID: 499087530}
   - component: {fileID: 499087529}
   - component: {fileID: 499087528}
+  - component: {fileID: 499087531}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -775,6 +857,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &499087531
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499087527}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.075
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587060583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.125, y: 0.42, z: 5}
+  m_LocalPosition: {x: 12.125, y: 0.42, z: 50}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1179,6 +1277,7 @@ GameObject:
   - component: {fileID: 913347323}
   - component: {fileID: 913347322}
   - component: {fileID: 913347324}
+  - component: {fileID: 913347325}
   m_Layer: 0
   m_Name: Gumba
   m_TagString: Untagged
@@ -1270,6 +1369,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &913347325
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913347321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.045439307}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.19, y: 0.22}
+    newSize: {x: 0.19, y: 0.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19, y: 0.1291214}
+  m_EdgeRadius: 0
 --- !u!1 &1720066235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720066235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.62, y: 0.4289999, z: 5}
+  m_LocalPosition: {x: -5.62, y: 0.4289999, z: 50}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

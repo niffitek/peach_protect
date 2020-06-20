@@ -23,7 +23,7 @@ public class mario_handler : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Vector3 moveVec = new Vector3(transform.position.x - movSpeed, transform.position.y, -2);
+        Vector3 moveVec = new Vector3(transform.position.x - movSpeed, transform.position.y, transform.position.y);
         transform.position = moveVec;
     }
 }

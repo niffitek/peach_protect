@@ -15,7 +15,7 @@ public class bowser_handler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveVec = new Vector3(transform.position.x, transform.position.y, -2);
+        Vector3 moveVec = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         if (Input.GetKey(KeyCode.W) && transform.position.y <= 0)
         {
             anim.speed = 1;
