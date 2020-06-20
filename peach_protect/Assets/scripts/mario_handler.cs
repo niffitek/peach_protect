@@ -16,7 +16,7 @@ public class mario_handler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (life <= 0)
+        if (life <= 0 || transform.position.x < 12)
         {
             Destroy(this);
             return;
@@ -26,6 +26,5 @@ public class mario_handler : MonoBehaviour
             return;
         Vector3 moveVec = new Vector3(transform.position.x - movSpeed, transform.position.y, -2);
         transform.position = moveVec;
-       
     }
 }
