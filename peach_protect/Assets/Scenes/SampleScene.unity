@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da140a26109c2ef4e925bc0cdfbb60d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  go: {fileID: 913347321}
 --- !u!95 &170757713
 Animator:
   serializedVersion: 3
@@ -986,7 +987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mario: {fileID: 418070814}
-  bigMario: {fileID: 0}
   welle: 0
 --- !u!4 &579333386
 Transform:
@@ -1278,6 +1278,7 @@ GameObject:
   - component: {fileID: 913347322}
   - component: {fileID: 913347324}
   - component: {fileID: 913347325}
+  - component: {fileID: 913347326}
   m_Layer: 0
   m_Name: Gumba
   m_TagString: Untagged
@@ -1395,6 +1396,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.1291214}
   m_EdgeRadius: 0
+--- !u!114 &913347326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913347321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0d271284f03c24ca64431143991ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pos_x: 0
 --- !u!1 &1720066235
 GameObject:
   m_ObjectHideFlags: 0
