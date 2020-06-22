@@ -47,17 +47,14 @@ public class bowser_handler : MonoBehaviour
             if (FindObjectOfType<MarioSpawner>().goombas > 0)
             {
                 Vector3 pos = Input.mousePosition;
-                if (pos.y > 30 && pos.y < 140)
-                {
-                    pos.z = 10.0f;
-                    pos = Camera.main.ScreenToWorldPoint(pos);
-                    var x = pos.x;
-                    pos.x = -11;
-                    GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
-                    test.GetComponent<gumba_handler>().pos_x = x;
-                    test.GetComponent<gumba_handler>().isClone = true;
-                    test.GetComponent<gumba_handler>().begin = spawner.GetComponent<MarioSpawner>().welle;
-                }
+                pos.z = 10.0f;
+                pos = Camera.main.ScreenToWorldPoint(pos);
+                var x = pos.x;
+                pos.x = -11;
+                GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
+                test.GetComponent<gumba_handler>().pos_x = x;
+                test.GetComponent<gumba_handler>().isClone = true;
+                test.GetComponent<gumba_handler>().begin = spawner.GetComponent<MarioSpawner>().welle;
                 FindObjectOfType<MarioSpawner>().goombas--;
             }
         }
