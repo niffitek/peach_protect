@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class peach_handler : MonoBehaviour
 {
     private bool move = false;
-    private float movSpeed = 0.02f;
+    private float movSpeed = 0.04f;
     public float lifebar = 50;
     public Image bar;
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 pos = new Vector3(Random.Range(-10, -8), Random.Range(-4, 0), 0);
+        Vector3 pos = new Vector3(-6, Random.Range(-4, 0), 0);
         transform.position = pos;
     }
 

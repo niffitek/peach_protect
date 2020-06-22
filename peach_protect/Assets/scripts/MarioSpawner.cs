@@ -35,11 +35,13 @@ public class MarioSpawner : MonoBehaviour
             if (welle % 2 == 0)
                 koopas++;
         }
+        if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
     }
 
     void Spawner()
     {
-        GameObject test = (GameObject)Instantiate(mario, new Vector3(Random.Range(0, 13), Random.Range(0, -4), -1), Quaternion.identity);
+        GameObject test = (GameObject)Instantiate(mario, new Vector3(Random.Range(2, 9), Random.Range(0, -4), -1), Quaternion.identity);
         test.GetComponent<mario_handler>().isClone = true;
         left_marios++;
         if (Random.Range(0, 2) == 0)

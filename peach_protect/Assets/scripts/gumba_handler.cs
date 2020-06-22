@@ -23,6 +23,7 @@ public class gumba_handler : MonoBehaviour
         if (Spawner.GetComponent<MarioSpawner>().welle != begin) {
             Vector3 pos_new = transform.position;
             pos_new.x -= 0.04f;
+            anim.speed = 1;
             transform.position = pos_new;
             return;
         }
@@ -34,10 +35,10 @@ public class gumba_handler : MonoBehaviour
         if (transform.position.x <= pos_x)
         {
             Vector3 pos_new = transform.position;
-            pos_new.x += 0.02f;
+            pos_new.x += 0.06f;
             transform.position = pos_new;
         }
-        else
+        else if (Spawner.GetComponent<MarioSpawner>().welle == begin)
             anim.speed = 0;
     }
     private void OnTriggerEnter2D(Collider2D collision)

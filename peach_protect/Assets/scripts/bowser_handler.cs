@@ -8,7 +8,7 @@ public class bowser_handler : MonoBehaviour
     public GameObject gumba;
     public GameObject shot;
     public GameObject spawner;
-    private float movSpeed = 0.03f;
+    private float movSpeed = 0.08f;
     private Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class bowser_handler : MonoBehaviour
                 pos.z = 10.0f;
                 pos = Camera.main.ScreenToWorldPoint(pos);
                 var x = pos.x;
-                pos.x = -11;
+                pos.x = -9;
                 GameObject test = (GameObject)Instantiate(gumba, pos, Quaternion.identity);
                 test.GetComponent<gumba_handler>().pos_x = x;
                 test.GetComponent<gumba_handler>().isClone = true;
