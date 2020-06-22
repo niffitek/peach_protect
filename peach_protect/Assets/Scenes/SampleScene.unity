@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2b2dca33ec1047449ad8dd36c72c8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 0.01
+  movSpeed: 0.02
   isClone: 0
   life: 2
   lifebar: 100

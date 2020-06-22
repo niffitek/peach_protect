@@ -19,7 +19,7 @@ public class projectile : MonoBehaviour
     {
         if (isColliding) return;
         isColliding = true;
-        if (collision.gameObject.tag == "Mario")
+        if (collision.gameObject.tag == "Mario" && collision.GetComponent<mario_handler>().getTimer() >= 1)
         {
             collision.GetComponent<mario_handler>().life -= 1;
         }

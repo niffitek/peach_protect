@@ -22,7 +22,7 @@ public class gumba_handler : MonoBehaviour
             return;
         if (Spawner.GetComponent<MarioSpawner>().welle != begin) {
             Vector3 pos_new = transform.position;
-            pos_new.x -= 0.02f;
+            pos_new.x -= 0.04f;
             transform.position = pos_new;
             return;
         }
@@ -34,7 +34,7 @@ public class gumba_handler : MonoBehaviour
         if (transform.position.x <= pos_x)
         {
             Vector3 pos_new = transform.position;
-            pos_new.x += 0.01f;
+            pos_new.x += 0.02f;
             transform.position = pos_new;
         }
         else
@@ -47,14 +47,14 @@ public class gumba_handler : MonoBehaviour
             if (collision.gameObject.GetComponent<mario_handler>().life == 2)
                 collision.gameObject.GetComponent<mario_handler>().life = 1;
             else
-                collision.gameObject.GetComponent<mario_handler>().movSpeed = 0.005f;
+                collision.gameObject.GetComponent<mario_handler>().movSpeed = 0.01f;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Mario")
         {
-            collision.gameObject.GetComponent<mario_handler>().movSpeed = 0.01f;
+            collision.gameObject.GetComponent<mario_handler>().movSpeed = 0.02f;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class mario_handler : MonoBehaviour
 {
-    public float movSpeed = 0.01f;
+    public float movSpeed = 0.04f;
     public bool isClone = false;
     public int life = 2;
     public int lifebar = 100;
@@ -16,6 +16,10 @@ public class mario_handler : MonoBehaviour
     {
         lifebar = life * 100;
         anim = GetComponent<Animator>();
+    }
+    public float getTimer()
+    {
+        return timer;
     }
     // Update is called once per frame
     void Update()
